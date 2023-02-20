@@ -66,3 +66,15 @@ $text2 = "foo, bar";
 
 echo $text1." passed the test: ".(checkString($text1) ? "yes":"no")."\n";
 echo $text2." passed the test: ".(checkString($text2) ? "yes":"no")."\n";
+
+// 5. function to find the second largest number in an array of numbers
+
+function secondLargest($numbers)
+{
+    rsort($numbers);
+    return $numbers[1]; //second element of reverse-sorted array
+}
+
+
+$numbers = array(4, 6, 2, 22, 11);
+echo secondLargest($numbers);
