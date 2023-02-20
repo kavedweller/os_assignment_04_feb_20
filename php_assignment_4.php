@@ -1,5 +1,6 @@
 <?php
 // 1. function to sort an array of strings by their length, in ascending order
+echo "\ntask-1 ------------------------------\n";
 
 function sortByStringLength(array $strings)
 {
@@ -20,6 +21,7 @@ echo "sorted-";
 print_r(sortByStringLength($a));
 
 // 2. concatenate two strings
+echo "\ntask-2 ------------------------------\n";
 
 function concat($str1, $str2)
 {
@@ -31,9 +33,10 @@ $strB = "bar";
 
 echo "\nconcatenate ".$strA." and ".$strB.": ";
 echo concat($strA, $strB);
-echo "\r\n\n";
+echo "\r\n";
 
 // 3. function to remove the first and last element from an array
+echo "\ntask-3 ------------------------------\n";
 
 function stripTerminalElements($array)
 {
@@ -42,13 +45,13 @@ function stripTerminalElements($array)
 
 $list = array("e0", "e1","e2", "e3", "e4", "e5", "e6");  
 
+print_r($list);
+echo "new-";
 print_r(stripTerminalElements($list));
-echo "\r\n\n";
+echo "\r\n";
 
 // 4. function to check if a string contains only letters and whitespace
-
-
-// print_r (explode(" ",$text));
+echo "\ntask-4 ------------------------------\n";
 
 function checkString($text)
 {
@@ -64,10 +67,12 @@ function checkString($text)
 $text1 = "foo bar";
 $text2 = "foo, bar";
 
-echo $text1." passed the test: ".(checkString($text1) ? "yes":"no")."\n";
-echo $text2." passed the test: ".(checkString($text2) ? "yes":"no")."\n";
+echo $text1." - contains only letters and whitespace: ".(checkString($text1) ? "yes":"no")."\n";
+echo $text2." - contains only letters and whitespace: ".(checkString($text2) ? "yes":"no")."\n";
 
 // 5. function to find the second largest number in an array of numbers
+echo "\ntask-5 ------------------------------\n";
+
 
 function secondLargest($numbers)
 {
@@ -77,4 +82,6 @@ function secondLargest($numbers)
 
 
 $numbers = array(4, 6, 2, 22, 11);
-echo secondLargest($numbers);
+print_r($numbers);
+echo "Second largest number: ".secondLargest($numbers);
+echo "\r\n";
