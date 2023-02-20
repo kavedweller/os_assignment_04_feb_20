@@ -44,3 +44,25 @@ $list = array("e0", "e1","e2", "e3", "e4", "e5", "e6");
 
 print_r(stripTerminalElements($list));
 echo "\r\n\n";
+
+// 4. function to check if a string contains only letters and whitespace
+
+
+// print_r (explode(" ",$text));
+
+function checkString($text)
+{
+    $words = explode(" ",$text);
+    $flag = TRUE;
+    foreach($words as $word)
+    {
+        $flag = $flag && ctype_alpha($word) ;
+    }
+    return $flag;
+}
+
+$text1 = "foo bar";
+$text2 = "foo, bar";
+
+echo $text1." passed the test: ".(checkString($text1) ? "yes":"no")."\n";
+echo $text2." passed the test: ".(checkString($text2) ? "yes":"no")."\n";
